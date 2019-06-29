@@ -16,14 +16,16 @@ int endx = 130;
 int y = 45;
 int offset = 10;
 int  timelimit = 60;
+int Lservo = 11;
+int Bservo = 10;
 
 void setup() {
   Serial.begin(9600);
   pinMode(leftButton, INPUT_PULLUP);
   pinMode(rightButton, INPUT_PULLUP);
   pinMode(startButton, INPUT_PULLUP);
-  laserServo.attach(11);
-  baseServo.attach(10);
+  laserServo.attach(Lservo);
+  baseServo.attach(Bservo);
   
   laserServo.write(y);
   baseServo.write(0);
